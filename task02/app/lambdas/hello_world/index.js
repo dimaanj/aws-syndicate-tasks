@@ -6,13 +6,13 @@ exports.handler = async (event) => {
     if(event.rawPath !== '/hello') {
         return {
             statusCode: 400,
-            body: `Bad request syntax or unsupported method. Request path: ${event.rawPath}. HTTP method: ${event.requestContext.http.method}`
+            message: `Bad request syntax or unsupported method. Request path: ${event.rawPath}. HTTP method: ${event.requestContext.http.method}`
         }
     }
     
     const response = {
         statusCode: 200,
-        body: 'Hello from Lambda',
+        message: 'Hello from Lambda',
     };
     return response;
 };
