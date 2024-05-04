@@ -8,7 +8,7 @@ exports.handler = async (event) => {
             statusCode: 400,
             body: {
                 statusCode: 400,
-                body: `Bad request syntax or unsupported method. Request path: ${event.rawPath}. HTTP method: ${event.requestContext.http.method}`
+                message: `Bad request syntax or unsupported method. Request path: ${event.rawPath}. HTTP method: ${event.requestContext.http.method}`
             },
         };
     }
